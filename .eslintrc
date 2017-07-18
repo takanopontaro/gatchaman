@@ -1,0 +1,12 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "env": {
+    "es6": true
+  },
+  "globals": {},
+  "rules": {
+    "no-underscore-dangle": 0,
+    "class-methods-use-this": 0,
+    "func-names": 0
+  }
+}

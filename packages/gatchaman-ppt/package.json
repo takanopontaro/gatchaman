@@ -1,0 +1,26 @@
+{
+  "name": "gatchaman-ppt",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "files": ["src", "bin"],
+  "repository": "https://github.com/takanopontaro/gatchaman.git",
+  "author": "takanopontaro",
+  "license": "MIT",
+  "scripts": {
+    "excel": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.pptx --src ./test/source.xlsx --type excel --sheet 0 --hdrow 0 --keycol 'A' --nosplit false --noimg false --ph 2 --dest dist/excel.pptx",
+    "text": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.pptx --src ./test/source.txt --type text --sheet 0 --hdrow 0 --keycol 'A' --nosplit false --noimg false --ph 2 --dest dist/text.pptx",
+    "stdin": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.pptx --src 'http---electron.atom.io-.jpg\nsp.jpg\nhttps---www.npmjs.com-package-webshot.png\nhttp---phantomjs.org-.jpg' --type stdin --sheet 0 --hdrow 0 --keycol 'A' --nosplit false --noimg false --ph 2 --dest dist/stdin.pptx"
+  },
+  "bin": {
+    "gatchamanppt": "bin/cli.js"
+  },
+  "dependencies": {
+    "gatchaman": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}

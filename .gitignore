@@ -1,0 +1,17 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+npm-debug.log
+~*
+.DS_Store
+*.lnk
+Desktop.ini
+Thumbs.db
+node_modules
+/tmp
+dist
+/doc
+*.map
+UBF8T346G9.Office

@@ -1,0 +1,28 @@
+{
+  "name": "gatchaman",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "files": ["src", "bin"],
+  "repository": "https://github.com/takanopontaro/gatchaman.git",
+  "author": "takanopontaro",
+  "license": "MIT",
+  "dependencies": {
+    "applescript": "^1.0.0",
+    "chokidar": "^1.7.0",
+    "fs-extra": "^4.0.0",
+    "jsonify-excel": "^1.0.7",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0"
+  },
+  "scripts": {
+  },
+  "bin": {
+    "gatchaman": "bin/cli.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
