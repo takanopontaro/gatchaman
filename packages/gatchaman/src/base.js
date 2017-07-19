@@ -14,11 +14,15 @@ module.exports = class {
       tmpl: null,
       source: null,
       type: null,
+      headNum: 0,
+      bodyNum: 1,
+      footNum: 2,
       sheet: 0,
       headerRowNum: 0,
       keyCol: 'A',
       noSplit: true,
       noImg: true,
+      cleanUp: true,
       placeholder: 1,
       dest: null,
     };
@@ -84,7 +88,15 @@ module.exports = class {
 
   saveInfo() {
     const { tmpl, source } = this.paths;
-    const { placeholder, noSplit, noImg } = this.options;
+    const {
+      placeholder,
+      noSplit,
+      noImg,
+      cleanUp,
+      headNum,
+      bodyNum,
+      footNum,
+    } = this.options;
     const {
       type,
       sheetNum,
@@ -96,8 +108,12 @@ module.exports = class {
 ${tmpl}
 ${source}
 ${+noImg}
-${placeholder}
 ${+noSplit}
+${+cleanUp}
+${placeholder}
+${headNum + 1}
+${bodyNum + 1}
+${footNum + 1}
 ${type === 'excel' ? sheetNum + 1 : 0}
 ${type === 'excel' ? headerRowNum + 1 : 0}
 ${type === 'excel' ? startRowNum + 1 : 0}
@@ -138,9 +154,11 @@ ${type === 'excel' ? keyColNum + 1 : 0}
         if (/see-you-again/.test(filePath)) {
           fs.copySync(this.paths.tmpl, this.options.dest);
           fs.removeSync(watchDir);
-          setTimeout(() => watcher.unwatch(watchDir), 1000);
           console.log('ok');
         }
+      })
+      .on('unlinkDir', () => {
+        watcher.close();
       });
   }
 

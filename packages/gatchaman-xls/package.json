@@ -7,9 +7,9 @@
   "author": "takanopontaro",
   "license": "MIT",
   "scripts": {
-    "excel": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.xlsx --src ./test/source.xlsx --type excel --sheet 0 --hdrow 0 --keycol 'A' --nosplit true --noimg false --ph 2 --dest dist/excel.xlsx",
-    "text": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.xlsx --src ./test/source.txt --type text --sheet 0 --hdrow 0 --keycol 'A' --nosplit true --noimg false --ph 2 --dest dist/text.xlsx",
-    "stdin": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.xlsx --src 'http---electron.atom.io-.jpg\nsp.jpg\nhttps---www.npmjs.com-package-webshot.png\nhttp---phantomjs.org-.jpg' --type stdin --sheet 0 --hdrow 0 --keycol 'A' --nosplit true --noimg false --ph 2 --dest dist/stdin.xlsx"
+    "excel": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.xlsx --src ./test/source.xlsx --type excel --sheet 0 --hdrow 0 --keycol 'A' --nosplit true --noimg false --ph 2 --dest dist/excel.xlsx --head 0 --body 1 --foot 2 --cleanup true",
+    "text": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.xlsx --src ./test/source.txt --type text --sheet 0 --hdrow 0 --keycol 'A' --nosplit true --noimg false --ph 2 --dest dist/text.xlsx --head 0 --body 1 --foot 2 --cleanup true",
+    "stdin": "node bin/cli.js --mac2016 true --shotdir ./test/shots --tmpl ./test/template.xlsx --src 'http---electron.atom.io-.jpg\nsp.jpg\nhttps---www.npmjs.com-package-webshot.png\nhttp---phantomjs.org-.jpg' --type stdin --sheet 0 --hdrow 0 --keycol 'A' --nosplit true --noimg false --ph 2 --dest dist/stdin.xlsx --head 0 --body 1 --foot 2 --cleanup true"
   },
   "bin": {
     "gatchamanxls": "bin/cli.js"
